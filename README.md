@@ -55,6 +55,7 @@ nintendo-data-analysis/
 ├── README.md
 └── requirements.txt                      # required Python libraries
 ```
+
 ## How to Run
 
 ```bash
@@ -69,6 +70,6 @@ Then open `notebooks/01_data_overview.ipynb` in VS Code or Jupyter and run all c
 
 ## Next Steps
 
-- Collect ______ sales data from Nintendo's earnings reports
+- Collect quarterly sales data from Nintendo's earnings reports
 - Compare the consoles after the same number of quarters since launch
 - Analyze regional sales (Japan, The Americas, Other)
