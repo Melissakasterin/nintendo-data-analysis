@@ -1,75 +1,150 @@
-# Nintendo Console Sales Analysis
+# Nintendo Data Analysis
 
-An analysis of official Nintendo sales data comparing hardware and software sales across four console generations: Wii, Wii U, Switch and Switch 2.
+An exploratory data analysis of Nintendo hardware and software sales using Python, pandas and matplotlib.
 
-## Questions
+This project explores Nintendo's console sales, software performance and best-selling games across different console generations.
 
-1. How many software units were sold per hardware unit for each console?
+## Project Questions
+
+1. How many software units were sold per hardware unit for each Nintendo console?
 2. Which console has the highest software-to-hardware ratio?
-3. Are the results directly comparable, given that the consoles have been on the market for different lengths of time?
+3. Which games are the best-selling titles on the Switch, Switch 2 and Wii U?
+4. How do the top five best-selling games compare across these platforms?
 
-## Data
+## Dataset
 
-- **Source:** [Nintendo – Dedicated Video Game Sales Units](https://www.nintendo.co.jp/ir/en/finance/hard_soft/index.html) (official Nintendo Investor Relations website)
-- **Data as of:** September 30, 2026
-- **File:** `data/raw/nintendo_lifetime_sales.csv`
-- **Content:** worldwide life-to-date hardware and software sales in million units
+The project uses sales figures published by Nintendo Investor Relations.
 
-## Methods
+**Official sources:**
+- [Nintendo – Hardware Sales](https://www.nintendo.co.jp/ir/en/finance/hard_soft/index.html)
+- [Nintendo – Software Sales](https://www.nintendo.co.jp/ir/en/finance/software/index.html)
 
-1. Entered the official sales figures manually into a CSV file
-2. Loaded and explored the data with pandas (`shape`, `dtypes`, `describe()`)
-3. Checked data quality: missing values and duplicate rows
-4. Calculated the software-to-hardware ratio (software units ÷ hardware units)
-5. Visualized the results with a bar chart using matplotlib
+### Dataset 1: Lifetime Console Sales
 
-## Results
+- File: `data/raw/nintendo_lifetime_sales.csv`
+- Data as of: September 30, 2026
+- Worldwide lifetime hardware and software sales
+- Units are measured in millions
 
-![Software-to-hardware ratio by Nintendo console](reports/figures/software_hardware_ratio.png)
+### Dataset 2: Top-Selling Games
 
-- The **Switch** has the highest ratio: **10.14** software units per hardware unit.
-- The **Switch 2** has the lowest ratio: **2.78**.
+- File: `data/raw/nintendo_top_titles.csv`
+- Five best-selling titles for each of three platforms: Switch 2, Switch and Wii U
+- Sales figures are measured in millions of units
 
-## Limitations
+## Tools & Technologies
 
-- The data is life-to-date. The Switch 2 launched in June 2025, the Switch in March 2017. The consoles had very different amounts of time to sell software, so their ratios are **not directly comparable**.
-- Nintendo reports **sell-in** figures (units shipped to retailers), not units sold to end customers.
-- The software figures include games **bundled** with consoles.
+- **Python** – programming language
+- **pandas** – data loading, cleaning and analysis
+- **matplotlib** – data visualization
+- **Jupyter Notebook** – exploratory analysis
+- **Git & GitHub** – version control and project documentation
+
+## Analysis & Results
+
+### 1. Software-to-Hardware Ratio
+
+The software-to-hardware ratio describes how many software units were sold per hardware unit.
+
+| Platform | Hardware (millions) | Software (millions) | Ratio |
+|---|---:|---:|---:|
+| Switch 2 | 26.35 | 73.21 | 2.78 |
+| Switch | 157.20 | 1,593.87 | 10.14 |
+| Wii U | 13.56 | 103.60 | 7.64 |
+| Wii | 101.63 | 921.85 | 9.07 |
+
+The Nintendo Switch has the highest software-to-hardware ratio among the four platforms.
+
+![Software-to-hardware ratio](reports/figures/software_hardware_ratio.png)
+
+### 2. Best-Selling Games
+
+The second analysis compares the five best-selling games for the Switch 2, Switch and Wii U.
+
+The combined sales of the five selected titles are:
+
+| Platform | Combined sales of top five games (millions) |
+|---|---:|
+| Switch | 226.47 |
+| Switch 2 | 32.03 |
+| Wii U | 30.76 |
+
+Mario Kart is the best-selling listed game on all three platforms.
+
+![Best-selling Nintendo games](reports/figures/top_selling_games.png)
+
+**Important:** These combined figures represent only the five selected best-selling games per platform, not total software sales.
+
+## Methodology
+
+1. Collected sales figures from Nintendo's official Investor Relations website.
+2. Stored the data in CSV files.
+3. Loaded and explored the datasets using pandas.
+4. Checked for missing values and duplicate records.
+5. Calculated the software-to-hardware ratio.
+6. Grouped and compared game sales by platform.
+7. Created visualizations using matplotlib.
 
 ## Project Structure
 
 ```text
 nintendo-data-analysis/
 ├── data/
-│   ├── raw/
-│   │   └── nintendo_lifetime_sales.csv   # sales data entered from Nintendo IR
-│   └── README.md                         # description of the data folder
+│   └── raw/
+│       ├── nintendo_lifetime_sales.csv
+│       └── nintendo_top_titles.csv
 ├── notebooks/
-│   ├── 00_pandas_practice.ipynb          # my pandas practice exercises
-│   └── 01_data_overview.ipynb            # main analysis
+│   ├── 00_pandas_practice.ipynb
+│   ├── 01_data_overview.ipynb
+│   └── 02_top_selling_titles.ipynb
 ├── reports/
 │   └── figures/
-│       └── software_hardware_ratio.png   # chart used in this README
+│       ├── software_hardware_ratio.png
+│       └── top_selling_games.png
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-└── requirements.txt                      # required Python libraries
+└── requirements.txt
 ```
 
+## Limitations
+
+- The lifetime sales figures cover different periods because the consoles were released in different years.
+- The software-to-hardware ratio should not be interpreted as the number of games owned by each individual user.
+- The top-five comparison includes only three platforms and five selected titles per platform.
+- Some software sales figures may include special reporting notes or regional publisher restrictions.
+
 ## How to Run
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/Melissakasterin/nintendo-data-analysis.git
 cd nintendo-data-analysis
+```
+
+Create and activate a virtual environment:
+
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+Install the required libraries:
+
+```bash
 pip install -r requirements.txt
 ```
 
-Then open `notebooks/01_data_overview.ipynb` in VS Code or Jupyter and run all cells.
+Open the notebooks in VS Code or Jupyter and run the cells.
 
-## Next Steps
+## Future Improvements
 
-- Collect quarterly sales data from Nintendo's earnings reports
-- Compare the consoles after the same number of quarters since launch
-- Analyze regional sales (Japan, The Americas, Other)
+- Analyze quarterly Nintendo sales data.
+- Compare console performance over equivalent periods after launch.
+- Explore regional sales data.
+- Expand the analysis to additional Nintendo games and platforms.
+
+## License
+
+This project is licensed under the MIT License.
