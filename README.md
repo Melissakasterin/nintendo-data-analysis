@@ -23,7 +23,7 @@ The project uses sales figures published by Nintendo Investor Relations.
 
 - File: `data/raw/nintendo_lifetime_sales.csv`
 - Data as of: September 30, 2026
-- Worldwide lifetime hardware and software sales
+- Worldwide life-to-date hardware and software sales
 - Units are measured in millions
 
 ### Dataset 2: Top-Selling Games
@@ -31,6 +31,7 @@ The project uses sales figures published by Nintendo Investor Relations.
 - File: `data/raw/nintendo_top_titles.csv`
 - Five best-selling titles for each of three platforms: Switch 2, Switch and Wii U
 - Sales figures are measured in millions of units
+- Data as of: September 30, 2026 (Switch 2 and Switch) and March 31, 2026 (Wii U)
 
 ## Tools & Technologies
 
