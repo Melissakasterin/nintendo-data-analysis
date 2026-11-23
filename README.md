@@ -110,10 +110,13 @@ nintendo-data-analysis/
 
 ## Limitations
 
-- The lifetime sales figures cover different periods because the consoles were released in different years.
+- The figures are life-to-date. The consoles were released in different years (e.g. Switch in March 2017, Switch 2 in June 2025), so they had very different amounts of time to accumulate sales. Their ratios are **not directly comparable**.
 - The software-to-hardware ratio should not be interpreted as the number of games owned by each individual user.
-- The top-five comparison includes only three platforms and five selected titles per platform.
-- Some software sales figures may include special reporting notes or regional publisher restrictions.
+- Nintendo reports **sell-in** figures (units shipped to retailers), not units sold to end customers.
+- Software figures include games **bundled** with hardware. For example, Mario Kart World was sold in a bundle with the Switch 2, which increases its sales figure.
+- The top-five comparison includes only three platforms and five selected titles per platform. The Wii is not included because Nintendo does not publish a top-selling titles list for it.
+- Some titles have special reporting notes, e.g. Pokémon Pokopia only includes units sold outside Japan.
+
 
 ## How to Run
 
