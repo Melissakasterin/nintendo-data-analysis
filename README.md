@@ -33,6 +33,14 @@ The project uses sales figures published by Nintendo Investor Relations.
 - Sales figures are measured in millions of units
 - Data as of: September 30, 2026 (Switch 2 and Switch) and March 31, 2026 (Wii U)
 
+### Dataset 3: Switch 2 Quarterly Hardware Sales
+
+- File: `data/raw/switch2_quarterly_hardware.csv`
+- Switch 2 hardware sales per quarter since launch (Apr–Jun 2025 to Jul–Sep 2026)
+- Source: Nintendo earnings releases and presentations
+- Nintendo's fiscal year starts in April. FY27/Q2 was calculated as the six-month figure minus FY27/Q1.
+- Validation: the six quarters add up to 26.35 million units, matching Nintendo's official life-to-date total.
+
 ## Tools & Technologies
 
 - **Python** – programming language
@@ -76,6 +84,14 @@ Mario Kart is the best-selling listed game on all three platforms.
 
 **Important:** These combined figures represent only the five selected best-selling games per platform, not total software sales.
 
+### 3. Switch 2 Quarterly Hardware Sales
+
+![Switch 2 quarterly hardware sales](reports/figures/switch2_quarterly_hardware.png)
+
+- The highest sales were in **Oct–Dec 2025** (7.01 million units), the holiday quarter, even higher than the launch quarter.
+- The lowest sales were in **Jan–Mar 2026** (2.49 million units), right after the holiday season.
+- In Jul–Sep 2026, sales were 2.67 million units, compared to 4.54 million one year earlier.
+  
 ## Methodology
 
 1. Collected sales figures from Nintendo's official Investor Relations website.
