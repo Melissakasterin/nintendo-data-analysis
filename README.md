@@ -107,16 +107,20 @@ Mario Kart is the best-selling listed game on all three platforms.
 ```text
 nintendo-data-analysis/
 ├── data/
-│   └── raw/
-│       ├── nintendo_lifetime_sales.csv
-│       └── nintendo_top_titles.csv
+│   ├── raw/
+│   │   ├── nintendo_lifetime_sales.csv
+│   │   ├── nintendo_top_titles.csv
+│   │   └── switch2_quarterly_hardware.csv
+│   └── README.md
 ├── notebooks/
 │   ├── 00_pandas_practice.ipynb
 │   ├── 01_data_overview.ipynb
-│   └── 02_top_selling_titles.ipynb
+│   ├── 02_top_selling_titles.ipynb
+│   └── 03_quarterly_sales.ipynb
 ├── reports/
 │   └── figures/
 │       ├── software_hardware_ratio.png
+│       ├── switch2_quarterly_hardware.png
 │       └── top_selling_games.png
 ├── .gitignore
 ├── LICENSE
@@ -160,8 +164,8 @@ Open the notebooks in VS Code or Jupyter and run the cells.
 
 ## Future Improvements
 
-- Analyze quarterly Nintendo sales data.
-- Compare console performance over equivalent periods after launch.
+- Collect quarterly sales data for the original Switch, Wii U and Wii.
+- Compare console performance after the same number of quarters since launch.
 - Explore regional sales data.
 - Expand the analysis to additional Nintendo games and platforms.
 
